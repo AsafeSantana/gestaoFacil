@@ -20,4 +20,5 @@ public class Despesas {
     private LocalDate dataDespesa;
     private String nomeDespesa;
     private BigDecimal valorDespesa;
+    private String mes;
 }

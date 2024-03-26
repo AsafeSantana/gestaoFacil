@@ -1,7 +1,7 @@
 package com.santana.asafe.repository;
 
 import com.santana.asafe.model.Despesas;
-import org.springframework.data.annotation.Id;
+import jakarta.persistence.Id;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.time.LocalDate;

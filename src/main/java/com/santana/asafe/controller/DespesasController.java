@@ -2,7 +2,6 @@ package com.santana.asafe.controller;
 
 import com.santana.asafe.model.Despesas;
 import com.santana.asafe.service.DespesasService;
-import org.apache.logging.log4j.message.StringFormattedMessage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -21,8 +20,8 @@ public class DespesasController {
 
     //cadastrar despesa
     @PostMapping("/cadastrar")
-    public Despesas cadastrarDespesa(@RequestParam LocalDate dataDespesa, @RequestParam String nomeDespesa, BigDecimal valorDespesa){
-        return despesasService.cadastrarDespesa(dataDespesa,nomeDespesa,valorDespesa);
+    public Despesas cadastrarDespesa(@RequestParam LocalDate dataDespesa, @RequestParam String nomeDespesa,@RequestParam BigDecimal valorDespesa, @RequestParam String mes){
+        return despesasService.cadastrarDespesa(dataDespesa,nomeDespesa,valorDespesa,mes);
     }
 
     //buscar despesas pela data
